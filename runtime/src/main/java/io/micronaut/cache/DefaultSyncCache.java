@@ -135,6 +135,10 @@ public class DefaultSyncCache implements SyncCache<com.github.benmanes.caffeine.
             builder.weigher(findWeigher());
         });
 
+        if (cacheConfiguration.isTestMode()) {
+            // run commands on same thread
+            builder.executor(Runnable::run);
+        }
         return builder.build();
     }
 
