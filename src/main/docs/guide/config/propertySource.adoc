@@ -20,6 +20,8 @@ Micronaut by default contains `PropertySourceLoader` implementations that load p
 * Enviroment-specific properties from `application-{environment}.{extension}` (Either `.properties`, `.json`, `.yml` or `.groovy` property formats supported)
 * Application-specific properties from `application.{extension}` (Either `.properties`, `.json`, `.yml` or `.groovy` property formats supported)
 
+TIP: To add additional custom properties from local files, use either `-Dmicronaut.config.files=myfile.yml` or use an environment variable `MICRONAUT_CONFIG_FILE=myfile.yml`. Multiple files can be passed comma separated.
+
 
 .Special Properties
 
